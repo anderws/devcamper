@@ -12,6 +12,10 @@ connectDB();
 const bootcampRouter = require('./routes/bootcampRouter');
 
 const app = express();
+
+//Body parser
+app.use(express.json());
+
 app.use('/api/v1/bootcamps', bootcampRouter);
 
 const PORT = process.env.PORT || 5000;
